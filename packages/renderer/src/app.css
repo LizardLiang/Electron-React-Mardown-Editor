@@ -1,5 +1,7 @@
 .app {
   background: #323232;
+  display: flex;
+  flex-direction: row;
 }
 
 button {

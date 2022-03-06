@@ -34,7 +34,7 @@
     "electron": "17.1.0",
     "electron-builder": "22.14.13",
     "electron-devtools-installer": "3.2.0",
-    "eslint": "^8.9.0",
+    "eslint": "^8.10.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-vue": "8.5.0",
     "happy-dom": "2.41.0",
@@ -46,6 +46,17 @@
     "vitest": "0.5.4"
   },
   "dependencies": {
+    "@codemirror/commands": "^0.19.8",
+    "@codemirror/gutter": "^0.19.9",
+    "@codemirror/highlight": "^0.19.7",
+    "@codemirror/history": "^0.19.2",
+    "@codemirror/lang-javascript": "^0.19.7",
+    "@codemirror/lang-markdown": "^0.19.6",
+    "@codemirror/language": "^0.19.8",
+    "@codemirror/language-data": "^0.19.2",
+    "@codemirror/matchbrackets": "^0.19.4",
+    "@codemirror/state": "^0.19.9",
+    "@codemirror/theme-one-dark": "^0.19.1",
     "electron-updater": "4.6.5",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"

@@ -7,14 +7,12 @@
     "skipLibCheck": true,
     "strict": true,
     "isolatedModules": true,
-    "types" : ["node"],
+    "types": ["node"],
     "baseUrl": ".",
     "jsx": "react",
     "allowSyntheticDefaultImports": true,
     "paths": {
-      "/@/*": [
-        "./src/*"
-      ]
+      "/@/*": ["./src/*"]
     },
     "lib": ["ESNext", "dom", "dom.iterable"]
   },
@@ -26,8 +24,5 @@
     "../../types/**/*.d.ts",
     "../preload/contracts.d.ts"
   ],
-  "exclude": [
-    "**/*.spec.ts",
-    "**/*.test.ts"
-  ]
+  "exclude": ["**/*.spec.ts", "**/*.test.ts"]
 }

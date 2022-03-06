@@ -1,6 +1,6 @@
-import {exposeInMainWorld} from './exposeInMainWorld';
+import { exposeInMainWorld } from './exposeInMainWorld'
 
 // Export for types in contracts.d.ts
-export const versions = process.versions;
+export const versions = process.versions
 
-exposeInMainWorld('versions', versions);
+exposeInMainWorld('versions', versions)

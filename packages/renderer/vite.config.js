@@ -3,15 +3,19 @@
 import { chrome } from '../../.electron-vendors.cache.json'
 import { join } from 'path'
 import { builtinModules } from 'module'
+import { defineConfig } from 'vite'
+import { loadAndSetEnv } from '../../scripts/loadAndSetEnv.mjs'
 
 const PACKAGE_ROOT = __dirname
+
+loadAndSetEnv(process.env.MODE, process.cwd())
 
 /**
  * @type {import('vite').UserConfig}
  * @see https://vitejs.dev/config/
  */
-const config = {
-  mode: process.env.MODE,
+export default defineConfig({
+  /*mode: process.env.MODE,*/
   root: PACKAGE_ROOT,
   resolve: {
     alias: {
@@ -35,7 +39,7 @@ const config = {
       external: [
         ...builtinModules
           .filter(m => m !== 'process' && m !== 'assert')
-          .flatMap(p => [p, `node:${p}`])
+          .flatMap(m => [m, `node:${m}`])
       ]
     },
     emptyOutDir: true,
@@ -43,7 +47,8 @@ const config = {
   },
   test: {
     environment: 'happy-dom'
+  },
+  define: {
+    global: {}
   }
-}
-
-export default config
+})

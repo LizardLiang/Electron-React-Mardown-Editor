@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react'
+import React, { useState, useCallback, useEffect } from 'react'
 import Editor from './editor'
 import Preview from './preview'
 import './app.css'
@@ -8,6 +8,12 @@ const App: React.FC = () => {
 
   const handleDocChange = useCallback(newDoc => {
     setDoc(newDoc)
+  }, [])
+
+  useEffect(() => {
+    window.process = {
+      ...window.process
+    }
   }, [])
 
   return (
